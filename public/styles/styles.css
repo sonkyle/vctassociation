@@ -1,0 +1,11 @@
+#image-input {
+    display: flex !important; 
+    flex-direction: row;
+}
+
+#input-section {
+    display: flex !important; 
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+}

@@ -1,0 +1,23 @@
+{
+  "name": "vctassociation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sonkyle/vctassociation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sonkyle/vctassociation/issues"
+  },
+  "homepage": "https://github.com/sonkyle/vctassociation#readme",
+  "description": "",
+  "dependencies": {
+    "tailwindcss": "^4.1.18"
+  }
+}
