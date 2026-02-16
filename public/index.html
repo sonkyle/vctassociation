@@ -6,6 +6,7 @@
     <title>Association</title>
     <link rel="stylesheet" href="styles/styles.css" />
     <script src="scripts/server.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
   </head>
@@ -14,27 +15,34 @@
       <nav></nav>
     </section>
     <div id="main-part">
-      <section id="header" class="">
+      <section id="header" class="text-5xl font-bold">
         <h1>Which Pro Player Do You Think Of?</h1>
       </section>
-      <section id="image-input" class="flex items-start gap-6 p-6">
-        <img
-          src="img/astra.png"
-          alt="Agent Image"
-          class="w-32 h-32 object-cover"
-        />
-        <div id="input-section" class="flex flex-col gap-3 justify-center">
-          <h2 class="text-2xl font-semibold">
-            Which Pro Player Do You Think Of?
-          </h2>
-          <input
-            type="text"
-            placeholder="Enter text here"
-            class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 w-full max-w-md"
-          />
-          <div>
-            <button>Back</button>
-            <button>Next</button>
+      <section id="image-input">
+        <img src="img/astra.png" alt="Agent Image"/>
+        <div id="input-section">
+          <div id="text-field">
+            <input
+              type="text"
+              id="input-field"
+              class="bg-black text-xl text-left border-2 border-[var(--accent-color)] block w-full pl-2 pr-6 py-2 rounded shadow-sm"
+              placeholder="Enter a pro player's name"
+              required
+            />
+            <button class="inline-flex h-12 items-center justify-center rounded-md bg-[var(--accent-color)] px-6 font-medium text-neutral-50 
+            transition duration-75 active:scale-[0.80]">
+              Submit
+            </button>
+          </div>
+          <div id="buttons">
+            <button class="inline-flex h-12 items-center justify-center rounded-md bg-[var(--accent-color)] px-6 font-medium text-neutral-50 
+            transition duration-75 active:scale-[0.80]">
+              Back
+            </button>
+            <button class="inline-flex h-12 items-center justify-center rounded-md bg-[var(--accent-color)] px-6 font-medium text-neutral-50 
+            transition duration-75 active:scale-[0.80]">
+              Skip
+            </button>
           </div>
         </div>
       </section>

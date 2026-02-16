@@ -2,10 +2,6 @@
   --accent-color: rgb(207, 148, 57);
 }
 
-html {
-  color: aliceblue;
-}
-
 body {
   margin: 0;
   min-height: 100vh;
@@ -14,12 +10,14 @@ body {
 
 #main-part {
   color: var(--accent-color);
-  width: 80%;
+  width: 70%;
+  height: 100%;
   align-items: center;
   margin: 0 auto;
   border: 5px solid var(--accent-color);
   border-radius: 5px;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.7);
+  transform: translateY(2.5rem);
 }
 
 #header {
@@ -43,4 +41,17 @@ body {
   flex-direction: column;
   gap: 1rem;
   justify-content: center;
+  text-align: left;
+}
+
+#text-field {
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+}
+
+#buttons {
+  display: flex !important;
+  flex-direction: row;
+  gap: 1rem;
 }
