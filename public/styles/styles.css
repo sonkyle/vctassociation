@@ -28,6 +28,19 @@ body {
   align-items: center;
 }
 
+#image-container {
+  width: 600px;
+  height: 775px;
+  margin-top: 1rem;
+}
+
+#image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
 #image-input {
   display: flex !important;
   flex-direction: row;

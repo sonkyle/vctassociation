@@ -18,8 +18,15 @@
       <section id="header" class="text-5xl font-bold">
         <h1>Which Pro Player Do You Think Of?</h1>
       </section>
+      <section>
+        <div id="summary">
+          
+        </div>
+      </section>
       <section id="image-input">
-        <img src="img/astra.png" alt="Agent Image"/>
+        <div id="image-container">
+          <img id="agent-image" src="img/splash/astra.png" alt="Agent Image"/>
+        </div>
         <div id="input-section">
           <div id="text-field">
             <input
@@ -29,17 +36,17 @@
               placeholder="Enter a pro player's name"
               required
             />
-            <button class="inline-flex h-12 items-center justify-center rounded-md bg-[var(--accent-color)] px-6 font-medium text-neutral-50 
+            <button id="submit-btn" class="inline-flex h-12 items-center justify-center rounded-md bg-[var(--accent-color)] px-6 font-medium text-neutral-50 
             transition duration-75 active:scale-[0.80]">
               Submit
             </button>
           </div>
           <div id="buttons">
-            <button class="inline-flex h-12 items-center justify-center rounded-md bg-[var(--accent-color)] px-6 font-medium text-neutral-50 
+            <button id="back-btn" class="inline-flex h-12 items-center justify-center rounded-md bg-[var(--accent-color)] px-6 font-medium text-neutral-50 
             transition duration-75 active:scale-[0.80]">
               Back
             </button>
-            <button class="inline-flex h-12 items-center justify-center rounded-md bg-[var(--accent-color)] px-6 font-medium text-neutral-50 
+            <button id="skip-btn" class="inline-flex h-12 items-center justify-center rounded-md bg-[var(--accent-color)] px-6 font-medium text-neutral-50 
             transition duration-75 active:scale-[0.80]">
               Skip
             </button>
