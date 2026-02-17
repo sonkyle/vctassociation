@@ -15,18 +15,137 @@
       <nav></nav>
     </section>
     <div id="main-part">
+
       <section id="header" class="text-5xl font-bold">
         <h1>Which Pro Player Do You Think Of?</h1>
+        <button id="share-btn" class="inline-flex h-12 items-center justify-center rounded-md bg-[var(--accent-color)] px-6 font-medium text-neutral-50 
+          transition duration-75 active:scale-[0.80]" disabled>
+            Share
+          </button>
       </section>
-      <section>
-        <div id="summary">
-          
-        </div>
-      </section>
+
       <section id="image-input">
+        <div id="summary">
+          <ul>
+            <li>
+              <img src="img/icons/astra.jpg" alt="astra_icon">
+              <p>Player</p>
+            </li>
+            <li>
+              <img src="img/icons/breach.jpg" alt="breach_icon">
+              <p>Player</p>
+            </li>
+            <li>
+              <img src="img/icons/brimstone.jpg" alt="brimstone_icon">
+              <p>Player</p>
+            </li>
+            <li>
+              <img src="img/icons/chamber.jpg" alt="chamber_icon">
+              <p>Player</p>
+            </li>
+            <li>
+              <img src="img/icons/clove.jpg" alt="clove_icon">
+              <p>Player</p>
+            </li>
+            <li>
+              <img src="img/icons/cypher.jpg" alt="cypher_icon">
+              <p>Player</p>
+            </li>
+            <li>
+              <img src="img/icons/deadlock.jpg" alt="deadlock_icon">
+              <p>Player</p>
+            </li>
+            <li>
+              <img src="img/icons/fade.jpg" alt="fade_icon">
+              <p>Player</p>
+            </li>
+            <li>
+              <img src="img/icons/gekko.jpg" alt="gekko_icon">
+              <p>Player</p>
+            </li>
+            <li>
+              <img src="img/icons/harbor.jpg" alt="harbor_icon">
+              <p>Player</p>
+            </li>
+            <li>
+              <img src="img/icons/iso.jpg" alt="iso_icon">
+              <p>Player</p>
+            </li>
+            <li>
+              <img src="img/icons/jett.jpg" alt="jett_icon">
+              <p>Player</p>
+            </li>
+            <li>
+              <img src="img/icons/kayo.jpg" alt="kayo_icon">
+              <p>Player</p>
+            </li>
+            <li>
+              <img src="img/icons/killjoy.jpg" alt="killjoy_icon">
+              <p>Player</p>
+            </li>
+            <li>
+              <img src="img/icons/neon.jpg" alt="neon_icon">
+              <p>Player</p>
+            </li>
+            <li>
+              <img src="img/icons/omen.jpg" alt="omen_icon">
+              <p>Player</p>
+            </li>
+            <li>
+              <img src="img/icons/phoenix.jpg" alt="phoenix_icon">
+              <p>Player</p>
+            </li>
+            <li>
+              <img src="img/icons/raze.jpg" alt="raze_icon">
+              <p>Player</p>
+            </li>
+            <li>
+              <img src="img/icons/reyna.jpg" alt="reyna_icon">
+              <p>Player</p>
+            </li>
+            <li>
+              <img src="img/icons/sage.jpg" alt="sage_icon">
+              <p>Player</p>
+            </li>
+            <li>
+              <img src="img/icons/skye.jpg" alt="skye_icon">
+              <p>Player</p>
+            </li>
+            <li>
+              <img src="img/icons/sova.jpg" alt="sova_icon">
+              <p>Player</p>
+            </li>
+            <li>
+              <img src="img/icons/tejo.jpg" alt="tejo_icon">
+              <p>Player</p>
+            </li>
+            <li>
+              <img src="img/icons/veto.jpg" alt="veto_icon">
+              <p>Player</p>
+            </li>
+            <li>
+              <img src="img/icons/viper.jpg" alt="viper_icon">
+              <p>Player</p>
+            </li>
+            <li>
+              <img src="img/icons/vyse.jpg" alt="vyse_icon">
+              <p>Player</p>
+            </li>
+            <li>
+              <img src="img/icons/waylay.jpg" alt="waylay_icon">
+              <p>Player</p>
+            </li>
+            <li>
+              <img src="img/icons/yoru.jpg" alt="yoru_icon">
+              <p>Player</p>
+            </li>
+          </ul>
+        </div>
+
         <div id="image-container">
           <img id="agent-image" src="img/splash/astra.png" alt="Agent Image"/>
         </div>
+
         <div id="input-section">
           <div id="text-field">
             <input
@@ -35,12 +154,14 @@
               class="bg-black text-xl text-left border-2 border-[var(--accent-color)] block w-full pl-2 pr-6 py-2 rounded shadow-sm"
               placeholder="Enter a pro player's name"
               required
+              autofocus
             />
-            <button id="submit-btn" class="inline-flex h-12 items-center justify-center rounded-md bg-[var(--accent-color)] px-6 font-medium text-neutral-50 
-            transition duration-75 active:scale-[0.80]">
+            <button type="submit" id="submit-btn" class="inline-flex h-12 items-center justify-center rounded-md bg-[var(--accent-color)] px-6 font-medium text-neutral-50 
+            transition duration-75 active:scale-[0.80]" disabled>
               Submit
             </button>
           </div>
+
           <div id="buttons">
             <button id="back-btn" class="inline-flex h-12 items-center justify-center rounded-md bg-[var(--accent-color)] px-6 font-medium text-neutral-50 
             transition duration-75 active:scale-[0.80]">
@@ -54,6 +175,7 @@
         </div>
       </section>
     </div>
+
     <script>
       window.addEventListener("DOMContentLoaded", (event) => {
         VANTA.FOG({

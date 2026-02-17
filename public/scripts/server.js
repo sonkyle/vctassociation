@@ -1,5 +1,11 @@
 let agentIndex = 0;
+let userResponses = [];
 const img = document.getElementById('agent-image');
+const input = document.getElementById('input-field');
+const submitBtn = document.getElementById('submit-btn');
+const backBtn = document.getElementById('back-btn');
+const skipBtn = document.getElementById('skip-btn');
+const paragraphs = document.querySelectorAll('#summary ul li p');
 
 const imageNames = [
     'astra', 'breach', 'brimstone', 'chamber', 'clove', 'cypher', 'deadlock', 'fade', 'gekko', 'harbor', 'iso', 'jett', 'kayo', 'killjoy', 'neon', 'omen', 'phoenix', 
@@ -9,12 +15,19 @@ const imageNames = [
 function getNextAgentImage() {
     agentIndex++;
     if (agentIndex > imageNames.length -1){
-        agentIndex = imageNames.length -1;
-        document.getElementById('submit-btn').style.display = 'none';
-        document.getElementById('back-btn').style.display = 'none';
-        document.getElementById('skip-btn').style.display = 'none';
-        document.getElementById('agent-image').style.display = 'none';
-        document.getElementById('input-field').style.display = 'none';
+        document.querySelector('#header h1').textContent = 'Summary of Answers';
+        submitBtn.style.display = 'none';
+        backBtn.style.display = 'none';
+        skipBtn.style.display = 'none';
+        document.getElementById('image-container').style.display = 'none';
+        input.style.display = 'none';
+        document.getElementById('image-input').style.display = 'none';
+        document.getElementById('summary').style.display = 'block';
+        document.getElementById('share-btn').disabled = false;
+        document.getElementById('share-btn').style.display = 'block';
+        paragraphs.forEach((p, index) => {
+            p.textContent = userResponses[index] || 'Skipped';
+        });
     }
     if (img) {
         img.src = `img/splash/${imageNames[agentIndex]}.png`;
@@ -33,27 +46,50 @@ function getPreviousAgentImage() {
     }
 }
 
+input.addEventListener('input', function() {
+    submitBtn.disabled = input.value.trim() === '';
+});
+
+input.addEventListener('keypress', function(event) {
+    if (event.key === 'Enter' && input.value !== '') {
+      submitBtn.click();
+    }
+  });
+
 document.addEventListener('DOMContentLoaded', () => {
-    const submitBtn = document.getElementById('submit-btn');
-    const backBtn = document.getElementById('back-btn');
-    const skipBtn = document.getElementById('skip-btn');
     if (submitBtn) {
         submitBtn.addEventListener('click', (e) => {
             e.preventDefault();
+            userResponses[agentIndex] = input.value.trim();
             getNextAgentImage();
-            
+            input.value = '';
+            input.focus();
         });
     }
     if (backBtn) {
         backBtn.addEventListener('click', (e) => {
             e.preventDefault();
             getPreviousAgentImage();
+            input.value = '';
+            input.focus();
         });
     }
     if (skipBtn) {
         skipBtn.addEventListener('click', (e) => {
             e.preventDefault();
             getNextAgentImage();
+            input.value = '';
+            input.focus();
         }); 
     }
+});
+
+document.getElementById('share-btn').addEventListener('click', function() {
+    const textToCopy = imageNames.map((agent, index) => 
+        `${agent.charAt(0).toUpperCase() + agent.slice(1)} - ${userResponses[index] || 'Skipped'}`
+    ).join('\n');
+    
+    navigator.clipboard.writeText(textToCopy)
+      .then(() => {alert('Copied to clipboard!');})
+      .catch(err => {console.error('Failed to copy:', err);});
 });
